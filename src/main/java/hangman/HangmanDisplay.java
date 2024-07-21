@@ -14,7 +14,7 @@ public class HangmanDisplay {
     public static String askFileName() {
         System.out.print("Words file? [leave empty to use short_words.txt] : ");
         String fileName = scanner.nextLine();
-        return fileName.isEmpty() ? "short_words.txt" : fileName;
+        return fileName.isEmpty() ? "words/short_words.txt" : fileName;
     }
 
     public static void doCorrectAnswer(String answer) {

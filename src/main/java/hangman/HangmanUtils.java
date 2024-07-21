@@ -1,17 +1,23 @@
 package hangman;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class HangmanUtils {
 
     private static final Random random = new Random();
 
     public static List<String> readFile(String fileName) {
-        try {
-            return Files.readAllLines(Paths.get(fileName));
+        try (InputStream inputStream = HangmanUtils.class.getClassLoader().getResourceAsStream(fileName);
+             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+            if (inputStream == null) {
+                throw new RuntimeException("Resource not found: " + fileName);
+            }
+            return reader.lines().collect(Collectors.toList());
         } catch (Exception e) {
             throw new RuntimeException("Error reading file: " + fileName, e);
         }
