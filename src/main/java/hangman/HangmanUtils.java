@@ -106,6 +106,9 @@ ________
 ________ 
             """
         };
-        System.out.println(stages[6 - numberGuesses]);
+        if (numberGuesses < 0 || numberGuesses >= stages.length) {
+            throw new IllegalArgumentException("Invalid number of guesses: " + numberGuesses);
+        }
+        System.out.println(stages[stages.length - 1 - numberGuesses]);
     }
 }
