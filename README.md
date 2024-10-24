@@ -1,31 +1,30 @@
-# Hangman Game in Java
+# Hangman
 
-## Overview
-
-This project is a simple implementation of the classic Hangman game written in Java. The game involves guessing a missing letter in a randomly chosen word. Players have a limited number of guesses to figure out the word before the game ends.
+## Project Overview
+Hangman is a classic word-guessing game where players try to guess a hidden word by suggesting letters within a certain number of guesses. This project implements the game using [mention the language or framework if applicable], providing an engaging way to test your vocabulary and deduction skills.
 
 ## Features
+- **Single Player Mode**: Play against the computer with a randomly selected word from a predefined list.
+- **Word Categories**: Choose from different categories for varied gameplay experiences.
+- **Guessing Mechanics**: Players can guess letters and see which letters are correct.
+- **Game History**: Track incorrect guesses and remaining attempts.
 
-- **Random Word Selection**: Selects a word randomly from a file containing a list of words.
-- **Dynamic Word Display**: Shows the word with missing letters, which are revealed as the player guesses correctly.
-- **Hangman Drawing**: Provides visual feedback on the number of remaining guesses.
-- **Error Handling**: Includes error handling for file reading and input errors.
+## How to Play
+1. **Game Start**: A random word is selected, and the number of attempts is displayed.
+2. **Guess Letters**: Enter a letter to guess. If the letter is in the word, it will be revealed; otherwise, you lose an attempt.
+3. **Win/Lose Conditions**: The game ends when either the word is guessed correctly or the player runs out of attempts.
 
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/kloggenberg/hangman.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd hangman
+    ```
 
-### Source Files
+3. [Include any additional installation steps like dependencies if necessary, or mention if no setup is required.]
 
-- **`HangmanUtils.java`**: Contains utility methods for file reading, word selection, and game logic.
-- **`HangmanDisplay.java`**: Handles the display of the game and user interactions.
-- **`HangmanGame.java`**: Main entry point for running the game.
-
-## Prerequisites
-
-- **Java JDK 22**: Ensure you have Java Development Kit 22 installed.
-- **IDE**: IntelliJ IDEA or any other Java IDE for development.
-
-## Setup
-
-1. **Clone the Repository**:
-
-   ```sh
-   git clone https://github.com/yourusername/your-repository.git
+## Usage
+To start the game run main class
